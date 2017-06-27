@@ -320,6 +320,8 @@
 		"content_margin": [10, -2, 10, 0],
 		"max_margin_trim": 12
 	},
+
+	/** Separadores de los tabs */
 	{
 		"class": "tab_control",
 		"settings": ["ui_separator"],
@@ -340,10 +342,10 @@
 		"content_margin": [15, -2, 15, 0]
 	},
 
-	// Selected current tab
-
+	/** Tab seleccionada actualmente */
 	{
-		"class": "tab_control", "attributes": ["selected"],
+		"class": "tab_control",
+		"attributes": ["selected"],
 		"layer2.opacity": 1.0,
 		"layer3.opacity": 0.0
 	},
@@ -386,6 +388,8 @@
 		"attributes": ["dirty"],
 		"shadow_color": [255, 204, 102]
 	},
+	
+	/** Texto de los tabs no seleccionados */
 	{
 		"class": "tab_label",
 		"fg": [96, 112, 128],
@@ -393,6 +397,7 @@
 		"shadow_color": [33, 39, 51, 0],
 		"shadow_offset": [0, 0]
 	},
+
 	{
 		"class": "tab_label",
 		"fg": [255, 204, 102],
@@ -409,6 +414,8 @@
 		"shadow_color": [217, 215, 206],
 		"shadow_offset": [0, -1],
 	},
+
+	/** Texto del tab seleccionado */
 	{
 		"class": "tab_label",
 		"settings": ["ui_fix_tab_labels"],
