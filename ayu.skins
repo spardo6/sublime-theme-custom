@@ -1,0 +1,22 @@
+{
+	"oceanic dark": {
+		"Preferences": {
+			"color_scheme": "Packages/ayu/oceanic-dark.tmTheme",
+			"theme": "ayu-mirage.sublime-theme",
+		}
+	},
+
+	"monokai dark": {
+		"Preferences": {
+			"color_scheme": "Packages/ayu/Monokai.tmTheme",
+			"theme": "ayu-mirage.sublime-theme",
+		}
+	},
+
+	"steven": {
+		"Preferences": {
+			"color_scheme": "Packages/ayu/Steven.tmTheme",
+			"theme": "ayu-mirage.sublime-theme",
+		}
+	}
+}
