@@ -265,290 +265,220 @@
 
 
 
-	/* @ TABS
-	* Tabs settings and behavioring
-	========================================================================= */
+	/**
+	 * @TABS
+	 * tabset_control >> tab_control >> tab_label
+	 */
 
+	/** Contenedor de los tabs */
 	{
 		"class": "tabset_control",
-		"tab_overlap": 0,
-		"tab_width": 50,
-		"tab_min_width": 50,
-		"tab_height": 36,
-		"mouse_wheel_switch": false,
+		"tab_overlap": 0, // Superposición
+		"tab_width": 50, // Ancho predeterminado
+		"tab_min_width": 50, // Ancho mínimo
+		"tab_height": 30, // Altura
+		"mouse_wheel_switch": false, // La rueda del ratón cambia los tabs
 
-		"layer0.opacity": 1.0,
-		"layer0.tint": [33, 39, 51],
-		"content_margin": [10, 0]
+		"layer0.opacity": 1.0, // Activa la primera capa
+		"layer0.tint": [33, 39, 51], // Color del contenedor de los tabs
+
+		"content_margin": [10, 0] // Margen del contenedor de tabs
 	},
+
+	/** Activa la rueda del ratón para cambiar de tab */
 	{
 		"class": "tabset_control",
 		"settings": ["mouse_wheel_switches_tabs", "!enable_tab_scrolling"],
 		"mouse_wheel_switch": true
 	},
+
+	/** Si estan activados los separadores */
 	{
 		"class": "tabset_control",
 		"settings": ["ui_separator"],
-		"content_margin": [0, 0, 0, 0],
-		"layer1.opacity": 0.3,
+		"content_margin": 0, // Margen del contenedor de pestañas
+		"layer1.opacity": 0.3, // Activa la capa 2
 		"layer1.texture": "ayu/assets/separator-bottom.png",
-		"layer1.tint": [96, 112, 128],
-		"layer1.inner_margin": [1, 0, 1, 2]
-	},
-	{
-		"class": "tabset_control",
-		"settings": ["ui_big_tabs"],
-		"tab_height": 44
+		"layer1.tint": [96, 112, 128], // Color de la capa 2
+		"layer1.inner_margin": [1, 0, 1, 2] // Margen interno
 	},
 
-	// Tabs
+	/** Tab */
 	{
 		"class": "tab_control",
 
-		"layer0.tint": [33, 39, 51],
 		"layer0.opacity": 1.0,
+		"layer0.tint": [33, 39, 51],
 
-		"layer1.texture": "",
-
-		"layer2.texture": "ayu/assets/separator-bottom.png",
-		"layer2.tint": [255, 204, 102],
-		"layer2.inner_margin": [1, 0, 1, 2],
-		"layer2.opacity": 0.0,
-
-		"layer3.texture": "",
-
-		"content_margin": [10, -2, 10, 0],
-		"max_margin_trim": 12
-	},
-
-	/** Separadores de los tabs */
-	{
-		"class": "tab_control",
-		"settings": ["ui_separator"],
-
+		"layer1.opacity": 0.3,
 		"layer1.texture": "ayu/assets/separator-right.png",
 		"layer1.tint": [96, 112, 128],
 		"layer1.inner_margin": [0, 1, 2, 1],
-		"layer1.opacity": 0.3,
 
+		"layer2.opacity": 0.0,
+		"layer2.texture": "ayu/assets/separator-bottom.png",
+		"layer2.tint": [255, 204, 102],
+		"layer2.inner_margin": [1, 0, 1, 2],
+
+		"layer3.opacity": 0.3,
 		"layer3.texture": "ayu/assets/separator-bottom.png",
 		"layer3.tint": [96, 112, 128],
 		"layer3.inner_margin": [1, 0, 1, 2],
-		"layer3.opacity": 0.3
-	},
-	{
-		"class": "tab_control",
-		"settings": ["ui_big_tabs"],
-		"content_margin": [15, -2, 15, 0]
+
+		"content_margin": [10, 0, 10, 0],
+		"max_margin_trim": 12
 	},
 
-	/** Tab seleccionada actualmente */
+	/** Tab activo */
 	{
 		"class": "tab_control",
 		"attributes": ["selected"],
-		"layer2.opacity": 1.0,
-		"layer3.opacity": 0.0
+		"layer2.opacity": 1.0, // Activa la capa 3
+		"layer3.opacity": 0.0 // Desactiva la capa 4
 	},
 
-	// Hovered current tab
-
+	/** Hover tabs */
 	{
-		"class": "tab_control", "attributes": ["hover"],
-		"layer2.opacity": 0.3
+		"class": "tab_control",
+		"attributes": ["hover"],
+		"layer2.opacity": 0.3 // Opacidad a la capa 3
 	},
 
-	// Selected current tab
-
+	/** Hover tab activo */
 	{
-		"class": "tab_control", "attributes": ["selected","hover"],
-		"layer2.opacity": 1.0
+		"class": "tab_control",
+		"attributes": ["selected","hover"],
+		"layer2.opacity": 1.0 // Cancela hover en el tab activo
 	},
 
-	// Tab Labels
-
+	/** Texto del tab */
 	{
 		"class": "tab_label",
-		"fg": [33, 39, 51, 0],
-		"shadow_color": [96, 112, 128],
-		"shadow_offset": [0, -1],
-		"font.size": 12,
+		"fg": [96, 112, 128], // Color de texto
+		"shadow_color": [96, 112, 128], // Color de sombra
+		"shadow_offset": [0, 0], // Posición de la sombra
+		"font.size": 12, // Tamaño de la fuente
 		"font.italic": false,
 		"font.bold": false,
-		"font.face": "Consolas"
-	},
-	{
-		"class": "tab_label",
-		"settings": ["ui_font_source_code_pro"],
-		"font.face": "Consolas"
-	},
-	{
-		"class": "tab_label",
-		"settings": ["highlight_modified_tabs"],
-		"font.italic": true,
-		"attributes": ["dirty"],
-		"shadow_color": [255, 204, 102]
-	},
-	
-	/** Texto de los tabs no seleccionados */
-	{
-		"class": "tab_label",
-		"fg": [96, 112, 128],
-		"settings": ["ui_fix_tab_labels"],
-		"shadow_color": [33, 39, 51, 0],
-		"shadow_offset": [0, 0]
+		// "font.face": "Consolas",
 	},
 
-	{
-		"class": "tab_label",
-		"fg": [255, 204, 102],
-		"attributes": ["dirty"],
-		"settings": ["ui_fix_tab_labels", "highlight_modified_tabs"]
-	},
-
-	// Tab selected label color
-
+	/** Texto del tab activo */
 	{
 		"class": "tab_label",
 		"parents": [{"class": "tab_control", "attributes": ["selected"]}],
-		"fg": [33, 39, 51, 0],
-		"shadow_color": [217, 215, 206],
-		"shadow_offset": [0, -1],
+		"fg": [217, 215, 206]
 	},
 
-	/** Texto del tab seleccionado */
-	{
-		"class": "tab_label",
-		"settings": ["ui_fix_tab_labels"],
-		"parents": [{"class": "tab_control", "attributes": ["selected"]}],
-		"fg": [217, 215, 206],
-		"shadow_color": [33, 39, 51, 0],
-		"shadow_offset": [0, 0]
-	},
-
+	/** Texto del tab de una vista previa */
 	{
 		"class": "tab_label",
 		"attributes": ["transient"],
 		"font.italic": true
 	},
 
-	// Tab Close Buttons
+	/** Botones de los tabs */
 	{
 		"class": "tab_close_button",
-		"content_margin": [0, 0],
+		"content_margin": [8, 8], // Dimensión del botón
 
-	// Close Icon
+		// Cerrar
+		"layer0.opacity": 1.0,
 		"layer0.texture": "ayu/assets/close.png",
 		"layer0.tint": [96, 112, 128],
-		"layer0.opacity": 1.0,
 
-	// Dirty Icon
-		"layer1.texture": "ayu/assets/dirty.png",
-		"layer1.tint": [96, 112, 128],
+		// Con cambios
 		"layer1.opacity": 0,
-	},
-
-	// Default
-	{
-		"class": "tab_close_button",
-		"settings": ["show_tab_close_buttons"],
-		"content_margin": [8, 8]
-	},
-
-	// Default hover
-	{
-		"class": "tab_close_button",
-		"settings": ["show_tab_close_buttons", "highlight_modified_tabs"],
-		"attributes": ["hover"],
-		"layer0.tint": [255, 204, 102]
-	},
-
-	// Dirty tab
-	{
-		"class": "tab_close_button",
-		"parents": [{"class": "tab_control", "attributes": ["dirty"]}],
-		"layer0.opacity": 0, // Close Icon
-		"layer1.opacity": 1.0, // dirty Icon
-		"content_margin": [8, 8]
-	},
-
-	// Dirty tab on hover
-	{
-		"class": "tab_close_button",
-		"parents": [{"class": "tab_control", "attributes": ["dirty"]}],
-		"attributes": ["hover"],
-		"layer0.opacity": 1.0, // Close Icon
-		"layer1.opacity": 0 // Close Icon
-	},
-
-	// Selected dirty tab
-	{
-		"class": "tab_close_button",
-		"parents": [{"class": "tab_control", "attributes": ["selected", "dirty"]}],
-		"layer0.opacity": 0, // Close Icon
-		"layer1.opacity": 1.0, // Dirty Icon
+		"layer1.texture": "ayu/assets/dirty.png",
 		"layer1.tint": [255, 204, 102]
 	},
 
-	// Selected dirty tab on hover
+	/** Boton tab con cambios */
 	{
 		"class": "tab_close_button",
-		"parents": [{"class": "tab_control", "attributes": ["selected", "dirty"]}],
-		"attributes": ["hover"],
-		"layer0.opacity": 1.0,
-		"layer1.opacity": 0
+		"parents": [{"class": "tab_control", "attributes": ["dirty"]}],
+		"layer0.opacity": 0, // Quita el botón de cerrar
+		"layer1.opacity": 1.0, // Muestra que hay cambios sin guardar
 	},
+
+	/** Hover al botón del tab cuando tiene cambios */
+	{
+		"class": "tab_close_button",
+		"parents": [{"class": "tab_control", "attributes": ["dirty"]}],
+		"attributes": ["hover"],
+		"layer0.opacity": 1.0, // Muestra el botón de cerrar
+		"layer1.opacity": 0 // Oculta el boton de cambios
+	},
+
+	// Selected dirty tab
+	// {
+	// 	"class": "tab_close_button",
+	// 	"parents": [{"class": "tab_control", "attributes": ["selected", "dirty"]}],
+	// 	"layer0.opacity": 0, // Close Icon
+	// 	"layer1.opacity": 1.0, // Dirty Icon
+	// 	"layer1.tint": [255, 204, 102]
+	// },
+
+	// Selected dirty tab on hover
+	// {
+	// 	"class": "tab_close_button",
+	// 	"parents": [{"class": "tab_control", "attributes": ["selected", "dirty"]}],
+	// 	"attributes": ["hover"],
+	// 	"layer0.opacity": 1.0,
+	// 	"layer1.opacity": 0
+	// },
 
 	// tab set scroll left | scroll right
-	{
-		"class": "scroll_tabs_left_button",
-		"content_margin": [12, 15],
-		"layer0.texture": "ayu/assets/arrow-left.png",
-		"layer0.tint": [62, 75, 89],
-		"layer0.opacity": 1.0
-	},
+	// {
+	// 	"class": "scroll_tabs_left_button",
+	// 	"content_margin": [12, 15],
+	// 	"layer0.texture": "ayu/assets/arrow-left.png",
+	// 	"layer0.tint": [62, 75, 89],
+	// 	"layer0.opacity": 1.0
+	// },
 
-	{
-		"class": "scroll_tabs_left_button",
-		"attributes": ["hover"],
-		"layer0.tint": [255, 204, 102]
-	},
+	// {
+	// 	"class": "scroll_tabs_left_button",
+	// 	"attributes": ["hover"],
+	// 	"layer0.tint": [255, 204, 102]
+	// },
 
-	{
-		"class": "scroll_tabs_right_button",
-		"content_margin": [12, 15],
-		"layer0.texture": "ayu/assets/arrow-right.png",
-		"layer0.tint": [62, 75, 89],
-		"layer0.opacity": 1.0
-	},
-	{
-		"class": "scroll_tabs_right_button",
-		"settings": ["ui_separator"],
-		"layer2.texture": "ayu/assets/separator-right.png",
-		"layer2.tint": [96, 112, 128],
-		"layer2.opacity": 0.3,
-		"layer2.inner_margin" : [0, 1, 2, 1]
-	},
+	// {
+	// 	"class": "scroll_tabs_right_button",
+	// 	"content_margin": [12, 15],
+	// 	"layer0.texture": "ayu/assets/arrow-right.png",
+	// 	"layer0.tint": [62, 75, 89],
+	// 	"layer0.opacity": 1.0
+	// },
+	// {
+	// 	"class": "scroll_tabs_right_button",
+	// 	"settings": ["ui_separator"],
+	// 	"layer2.texture": "ayu/assets/separator-right.png",
+	// 	"layer2.tint": [96, 112, 128],
+	// 	"layer2.opacity": 0.3,
+	// 	"layer2.inner_margin" : [0, 1, 2, 1]
+	// },
 
-	{
-		"class": "scroll_tabs_right_button",
-		"attributes": ["hover"],
-		"layer0.tint": [255, 204, 102]
-	},
+	// {
+	// 	"class": "scroll_tabs_right_button",
+	// 	"attributes": ["hover"],
+	// 	"layer0.tint": [255, 204, 102]
+	// },
 
-	{
-		"class": "show_tabs_dropdown_button",
-		"content_margin": [12, 12],
-		"layer0.texture": "ayu/assets/overflow-menu.png",
-		"layer0.tint": [62, 75, 89],
-		"layer0.opacity": 1.0,
-		"layer0.inner_margin": [0, 0]
-	},
+	// {
+	// 	"class": "show_tabs_dropdown_button",
+	// 	"content_margin": [12, 12],
+	// 	"layer0.texture": "ayu/assets/overflow-menu.png",
+	// 	"layer0.tint": [62, 75, 89],
+	// 	"layer0.opacity": 1.0,
+	// 	"layer0.inner_margin": [0, 0]
+	// },
 
-	{
-		"class": "show_tabs_dropdown_button",
-		"attributes": ["hover"],
-		"layer0.tint": [255, 204, 102]
-	},
+	// {
+	// 	"class": "show_tabs_dropdown_button",
+	// 	"attributes": ["hover"],
+	// 	"layer0.tint": [255, 204, 102]
+	// },
 
 
 	/* @ SIDEBAR
