@@ -35,7 +35,7 @@
 	// !!!
 	{
 		"class": "progress_gauge_control",
-		"layer0.tint": [255, 204, 102],
+		"layer0.tint": [73, 158, 185],
 		"layer0.opacity": 1.0,
 		"content_margin": [0, 6]
 	},
@@ -68,7 +68,7 @@
 	{
 		"class": "fold_button_control",
 		"attributes": ["hover"],
-		"layer0.tint": [255, 204, 102],
+		"layer0.tint": [73, 158, 185],
 	},
 
 	{
@@ -99,9 +99,9 @@
 	{
 		"class": "auto_complete_label",
 		"fg": [96, 112, 128],
-		"match_fg": [255, 204, 102],
+		"match_fg": [73, 158, 185],
 		"selected_fg": [217, 215, 206],
-		"selected_match_fg": [255, 204, 102]
+		"selected_match_fg": [73, 158, 185]
 	},
 
 	{
@@ -229,9 +229,9 @@
 	{
 		"class": "quick_panel_label",
 		"fg": [96, 112, 128],
-		"match_fg": [255, 204, 102],
+		"match_fg": [73, 158, 185],
 		"selected_fg": [217, 215, 206],
-		"selected_match_fg": [255, 204, 102]
+		"selected_match_fg": [73, 158, 185]
 	},
 
 	// Panel labels
@@ -240,9 +240,9 @@
 		"class": "quick_panel_label",
 		"parents": [{"class": "overlay_control"}],
 		"fg": [96, 112, 128],
-		"match_fg": [255, 204, 102],
+		"match_fg": [73, 158, 185],
 		"selected_fg": [217, 215, 206],
-		"selected_match_fg": [255, 204, 102]
+		"selected_match_fg": [73, 158, 185]
 	},
 
 	// Panels sublabels
@@ -317,7 +317,7 @@
 
 		"layer2.opacity": 0.0,
 		"layer2.texture": "ayu/assets/separator-bottom.png",
-		"layer2.tint": [255, 204, 102],
+		"layer2.tint": [73, 158, 185],
 		"layer2.inner_margin": [1, 0, 1, 2],
 
 		"layer3.opacity": 0.3,
@@ -390,7 +390,7 @@
 		// Con cambios
 		"layer1.opacity": 0,
 		"layer1.texture": "ayu/assets/dirty.png",
-		"layer1.tint": [255, 204, 102]
+		"layer1.tint": [73, 158, 185]
 	},
 
 	/** Boton tab con cambios */
@@ -416,7 +416,7 @@
 	// 	"parents": [{"class": "tab_control", "attributes": ["selected", "dirty"]}],
 	// 	"layer0.opacity": 0, // Close Icon
 	// 	"layer1.opacity": 1.0, // Dirty Icon
-	// 	"layer1.tint": [255, 204, 102]
+	// 	"layer1.tint": [73, 158, 185]
 	// },
 
 	// Selected dirty tab on hover
@@ -440,7 +440,7 @@
 	// {
 	// 	"class": "scroll_tabs_left_button",
 	// 	"attributes": ["hover"],
-	// 	"layer0.tint": [255, 204, 102]
+	// 	"layer0.tint": [73, 158, 185]
 	// },
 
 	// {
@@ -462,7 +462,7 @@
 	// {
 	// 	"class": "scroll_tabs_right_button",
 	// 	"attributes": ["hover"],
-	// 	"layer0.tint": [255, 204, 102]
+	// 	"layer0.tint": [73, 158, 185]
 	// },
 
 	// {
@@ -477,7 +477,7 @@
 	// {
 	// 	"class": "show_tabs_dropdown_button",
 	// 	"attributes": ["hover"],
-	// 	"layer0.tint": [255, 204, 102]
+	// 	"layer0.tint": [73, 158, 185]
 	// },
 
 
@@ -526,7 +526,7 @@
 		"class": "tree_row",
 		"layer1.texture": "ayu/assets/tree-highlight.png",
 		"layer1.opacity": { "target": 0.0, "speed": 5.0, "interpolation": "smoothstep" },
-		"layer1.tint": [255, 204, 102],
+		"layer1.tint": [73, 158, 185],
 		"layer1.inner_margin": [5, 0, 0, 0]
 	},
 
@@ -642,7 +642,7 @@
 		"layer1.opacity": 1,
 
 		"layer2.texture": "ayu/assets/folder-open.png",
-		"layer2.tint": [255, 204, 102],
+		"layer2.tint": [73, 158, 185],
 		"layer2.opacity": 0.0
 	},
 
@@ -656,7 +656,7 @@
 	{
 		"class": "icon_folder",
 		"parents": [{ "class": "tree_row", "attributes": ["hover"] }],
-		"layer1.tint": [255, 204, 102]
+		"layer1.tint": [73, 158, 185]
 	},
 
 	{
@@ -688,7 +688,7 @@
 	{
 		"class": "icon_folder",
 		"parents": [{ "class": "tree_row", "attributes": ["selected"] }],
-		"layer1.tint": [255, 204, 102]
+		"layer1.tint": [73, 158, 185]
 	},
 
 	{
@@ -711,7 +711,7 @@
 			"loop": true,
 			"frame_time": 0.075
 		},
-		"layer1.tint": [255, 204, 102],
+		"layer1.tint": [73, 158, 185],
 
 		"layer0.opacity": 0.0,
 		"content_margin": [8, 8]
@@ -733,13 +733,13 @@
 	{
 		"class": "icon_folder_dup",
 		"parents": [{ "class": "tree_row", "attributes": ["hover"]}],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	{
 		"class": "icon_folder_dup",
 		"parents": [{"class": "tree_row", "attributes": ["expanded"] }],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	// Hidden arrow icon before folder
@@ -783,7 +783,7 @@
 		"class": "close_button",
 		"attributes": ["hover"],
 		"layer0.opacity": 1.0,
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 
@@ -997,7 +997,7 @@
 	{
 		"class": "panel_button_control",
 		"attributes": ["hover"],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	/* @ WIDGET PANEL
@@ -1035,7 +1035,7 @@
 	{
 		"class": "panel_close_button",
 		"attributes": ["hover"],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	/** Linea de texto panel de superposición */
@@ -1061,7 +1061,7 @@
 		// "layer0.opacity": 0,
 		// "layer1.texture": "ayu/assets/input-search.png",
 		"layer1.opacity": 0,
-		// "layer1.tint": [255, 204, 102],
+		// "layer1.tint": [73, 158, 185],
 		// "layer1.inner_margin": [35, -60, 0, -60],
 		"content_margin": [16, 16, 10, 16]
 	},
@@ -1077,7 +1077,7 @@
 	{
 		"class": "dropdown_button_control",
 		"attributes": ["hover"],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 
@@ -1112,7 +1112,7 @@
 	{
 		"class": "label_control",
 		"parents": [{"class": "button_control", "attributes": ["hover"]}],
-		"color":  [255, 204, 102]
+		"color":  [73, 158, 185]
 	},
 
 	// !!!
@@ -1142,7 +1142,7 @@
 	{
 		"class": "icon_regex",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	// Preserve case sensitive
@@ -1158,7 +1158,7 @@
 	{
 		"class": "icon_case",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	// Wholeword
@@ -1175,7 +1175,7 @@
 	{
 		"class": "icon_whole_word",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	// Wrap
@@ -1191,7 +1191,7 @@
 	{
 		"class": "icon_wrap",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	// In selection
@@ -1207,7 +1207,7 @@
 	{
 		"class": "icon_in_selection",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	// Highlight Result
@@ -1223,7 +1223,7 @@
 	{
 		"class": "icon_highlight",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	// Preserve Case
@@ -1239,7 +1239,7 @@
 	{
 		"class": "icon_preserve_case",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	// Show context
@@ -1256,7 +1256,7 @@
 	{
 		"class": "icon_context",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	// Use buffer
@@ -1272,7 +1272,7 @@
 	{
 		"class": "icon_use_buffer",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 	// Reverse direction
@@ -1288,7 +1288,7 @@
 	{
 		"class": "icon_reverse",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [255, 204, 102]
+		"layer0.tint": [73, 158, 185]
 	},
 
 
