@@ -481,156 +481,132 @@
 	// },
 
 
-	/* @ SIDEBAR
-	* Sidebar panel settings and behavioring
-	========================================================================= */
+	/**
+	 * @SIDEBAR
+	 */
 
+	/** Contenedor de la barra lateral */
 	{
 		"class": "sidebar_container",
 		"content_margin": [0, -16, 0, 0],
 		"layer0.opacity": 1,
-		"layer0.tint": [33, 39, 51]
-	},
-	{
-		"class": "sidebar_container",
-		"settings": ["ui_separator"],
+		"layer0.tint": [33, 39, 51],
+
 		"layer1.texture": "ayu/assets/separator-right.png",
 		"layer1.tint": [96, 112, 128],
 		"layer1.inner_margin": [0, 1, 2, 1],
 		"layer1.opacity": 0.3
 	},
 
+	/** Arbol de archivos */
 	{
 		"class": "sidebar_tree",
-		"row_padding": [20, 6],
 		"indent": 12,
 		"indent_offset": 0,
 		"indent_top_level": false,
+		"row_padding": [10, 6],
 		"dark_content": false
 	},
 
-	{
-		"class": "sidebar_heading",
-		"color": [33, 39, 51],
-		"font.face": "Consolas",
-		"font.bold": true,
-		"font.size": 11
-	},
-	{
-		"class": "sidebar_heading",
-		"settings": ["ui_font_source_code_pro"],
-		"font.face": "Consolas"
-	},
-
+	/** Arbol de un directorio abierto */
 	{
 		"class": "tree_row",
 		"layer1.texture": "ayu/assets/tree-highlight.png",
 		"layer1.opacity": { "target": 0.0, "speed": 5.0, "interpolation": "smoothstep" },
 		"layer1.tint": [73, 158, 185],
 		"layer1.inner_margin": [5, 0, 0, 0]
-	},
-
-	{
+	}, {
 		"class": "tree_row",
 		"attributes": ["selected"],
 		"layer1.opacity": { "target": 1.0, "speed": 5.0, "interpolation": "smoothstep" }
 	},
 
+	/** Abrir archivos */
+	{
+		"class": "sidebar_heading",
+		"color": [33, 39, 51],
+		"font.bold": true,
+	},
+
+	/** Nombres de los archivos */
 	{
 		"class": "sidebar_label",
 		"color": [96, 112, 128],
 		"shadow_color": [0, 0, 0],
-		"shadow_offset": [0, 0],
-		"font.face": "Consolas",
-		"font.size": 12
-	},
-	{
-		"class": "sidebar_label",
-		"settings": ["ui_font_source_code_pro"],
-		"font.face": "Consolas"
-	},
-
-	{
+		"shadow_offset": [0, 0]
+	}, {
 		"class": "sidebar_label",
 		"parents": [{"class": "tree_row","attributes": ["hover"]}],
 		"color": [217, 215, 206]
-	},
-
-	{
+	}, {
 		"class": "sidebar_label",
 		"parents": [{"class": "tree_row","attributes": ["selected"]}],
-		"color": [217, 215, 206],
-		"shadow_color": [0, 0, 0],
-		"shadow_offset": [0, 0]
-	},
-
-	{
+		"color": [217, 215, 206]
+	}, {
 		"class": "sidebar_label",
 		"parents": [{"class": "tree_row","attributes": ["expandable"]}],
-		"color": [96, 112, 128],
-		"font.bold": false
-	},
-
-	{
-		"class": "sidebar_label",
-		"parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-		"settings": ["bold_folder_labels"],
-		"font.bold": true
-	},
-
-	{
+		"color": [96, 112, 128]
+	}, {
 		"class": "sidebar_label",
 		"parents": [{"class": "tree_row", "attributes": ["expandable", "hover"]}],
 		"color": [217, 215, 206]
-	},
-
-	{
+	}, {
 		"class": "sidebar_label",
 		"parents": [{"class": "tree_row", "attributes": ["expanded"]}],
 		"color": [217, 215, 206]
-	},
-
-	{
-		"class": "sidebar_label",
-		"parents": [{"class": "tree_row", "attributes": ["expanded"]}],
-		"settings": ["bold_folder_labels"],
-		"font.bold": true
-	},
-
-	// {
-	//  "class": "sidebar_label",
-	//  "parents": [{"class": "tree_row", "attributes": ["expanded", "selected"]}],
-	//  "color": [217, 215, 206]
-	// },
-
-	{
+	}, {
+	 "class": "sidebar_label",
+	 "parents": [{"class": "tree_row", "attributes": ["expanded", "selected"]}],
+	 "color": [217, 215, 206]
+	}, {
 		"class": "sidebar_label",
 		"attributes": ["transient"],
 		"font.italic": false
 	},
 
-	// File icons and folder
+	/** Botón para cerrar archivos */
+	{
+		"class": "close_button",
+		"content_margin": [8, 8],
 
+		"layer0.opacity": 1,
+		"layer0.texture": "ayu/assets/close.png",
+		"layer0.inner_margin": [0, 0],
+		"layer0.tint": [96, 112, 128]
+	}, {
+		"class": "close_button",
+		"parents": [{ "class": "tree_row", "attributes": ["hover"] }],
+		"layer0.opacity": 0.6
+	}, {
+		"class": "close_button",
+		"attributes": ["dirty"],
+		"layer0.texture": "ayu/assets/dirty.png",
+		"layer0.tint": [96, 112, 128],
+		"layer0.opacity": 1.0
+	}, {
+		"class": "close_button",
+		"attributes": ["hover"],
+		"layer0.opacity": 1.0,
+		"layer0.tint": [73, 158, 185]
+	},
+
+	/** Iconos del archivo (.tmPreferences) */
 	{
 		"class": "icon_file_type",
-	// layer0.texture is filled in by code with the relevant icon name
-		"layer0.opacity": 0.8,
+		"layer0.opacity": 0.7,
 		"layer0.inner_margin": [0, 2, 0, -2],
 		"content_margin": [9, 9]
-	},
-	{
+	}, {
 		"class": "icon_file_type",
 		"parents": [{"class": "tree_row", "attributes": ["selected"]}],
 		"layer0.opacity": 1
-	},
-	{
+	}, {
 		"class": "icon_file_type",
 		"parents": [{"class": "tree_row", "attributes": ["hover"]}],
 		"layer0.opacity": 1
 	},
 
-	// Secondary folder icon (original) used as main folder icon
-
+	/** Icono de carpeta */
 	{
 		"class": "icon_folder",
 		"content_margin": [9, 9],
@@ -640,57 +616,22 @@
 		"layer1.texture": "ayu/assets/folder.png",
 		"layer1.tint": [62, 75, 89],
 		"layer1.opacity": 1,
-
-		"layer2.texture": "ayu/assets/folder-open.png",
-		"layer2.tint": [73, 158, 185],
-		"layer2.opacity": 0.0
-	},
-
-	{
+	}, {
 		"class": "icon_folder",
 		"parents": [{ "class": "tree_row", "attributes": ["expanded"] }],
-		"layer1.opacity": 0.0,
-		"layer2.opacity": 1.0
-	},
-
-	{
+		"layer1.tint": [73, 158, 185],
+	}, {
 		"class": "icon_folder",
 		"parents": [{ "class": "tree_row", "attributes": ["hover"] }],
+		"layer1.opacity": 0.6,
 		"layer1.tint": [73, 158, 185]
-	},
-
-	{
-		"class": "icon_folder",
-		"parents": [{ "class": "tree_row", "attributes": ["expanded", "hover"] }],
-		"layer2.texture": {
-			"keyframes": [
-				"ayu/assets/folder-open-1.png",
-				"ayu/assets/folder-open-1.png",
-				"ayu/assets/folder-open-2.png",
-				"ayu/assets/folder-open-3.png",
-				"ayu/assets/folder-open-4.png",
-				"ayu/assets/folder-open-5.png",
-				"ayu/assets/folder-open-5.png",
-				"ayu/assets/folder-open-5.png",
-				"ayu/assets/folder-open-6.png",
-				"ayu/assets/folder-open-6.png",
-				"ayu/assets/folder-open-6.png",
-				"ayu/assets/folder-open-6.png",
-				"ayu/assets/folder-open.png"
-			],
-			"loop": false,
-			"frame_time": 0.020
-		},
-		"layer1.opacity": 0.0,
-		"layer2.opacity": 1.0
-	},
-
-	{
+	}, {
 		"class": "icon_folder",
 		"parents": [{ "class": "tree_row", "attributes": ["selected"] }],
 		"layer1.tint": [73, 158, 185]
 	},
 
+	/** Carpetas que no han cargado */
 	{
 		"class": "icon_folder_loading",
 		"layer1.texture": {
@@ -728,62 +669,20 @@
 		"layer1.texture": "ayu/assets/folder-symlink.png",
 		"layer1.tint": [96, 112, 128],
 		"layer1.opacity": 0.3
-	},
-
-	{
+	}, {
 		"class": "icon_folder_dup",
 		"parents": [{ "class": "tree_row", "attributes": ["hover"]}],
 		"layer0.tint": [73, 158, 185]
-	},
-
-	{
+	}, {
 		"class": "icon_folder_dup",
 		"parents": [{"class": "tree_row", "attributes": ["expanded"] }],
 		"layer0.tint": [73, 158, 185]
 	},
 
-	// Hidden arrow icon before folder
-
+	/** Botón de expandir y contraer en los arboles de archivos */
 	{
 		"class": "disclosure_button_control",
 		"content_margin": [0, 0, 0, 0]
-	},
-
-	// Opened files
-	{
-		"class": "close_button",
-		"content_margin": [8, 8],
-
-	// Default Close icon
-		"layer0.texture": "ayu/assets/close.png",
-		"layer0.opacity": 0,
-		"layer0.inner_margin": [0, 0],
-		"layer0.tint": [96, 112, 128]
-	},
-
-
-	// Opened file hover
-
-	{
-		"class": "close_button",
-		"parents": [{ "class": "tree_row", "attributes": ["hover"] }],
-	// Default Close icon
-		"layer0.opacity": 0.6
-	},
-
-	{
-		"class": "close_button",
-		"attributes": ["dirty"],
-		"layer0.texture": "ayu/assets/dirty.png",
-		"layer0.tint": [96, 112, 128],
-		"layer0.opacity": 1.0
-	},
-
-	{
-		"class": "close_button",
-		"attributes": ["hover"],
-		"layer0.opacity": 1.0,
-		"layer0.tint": [73, 158, 185]
 	},
 
 
